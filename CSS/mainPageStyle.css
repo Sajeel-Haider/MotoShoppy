@@ -1,3 +1,7 @@
+:root {
+  --color-primary: rgb(22, 160, 133);
+  --color-secondary: rgb(27, 50, 45);
+}
 * {
   margin: 0;
   padding: 0;
@@ -65,6 +69,43 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
   border-bottom: 2px solid rgb(22, 160, 133);
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar {
+  background: rgb(27, 50, 45, 0.8);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px, 20px;
+  width: 30%;
+}
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  margin-left: 20px;
+  outline: none;
+  padding: 24px, 24px;
+  font-size: 15px;
+  color: white;
+}
+::placeholder {
+  color: white;
+}
+.search-bar button img {
+  width: 20px;
+}
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: white;
+  cursor: pointer;
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*  Background */
