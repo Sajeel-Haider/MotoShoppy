@@ -104,7 +104,7 @@ header {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background: white;
+  background: rgb(0, 0, 0);
   cursor: pointer;
 }
 /*--------------------------------------------------------------------------------------------------------------*/
