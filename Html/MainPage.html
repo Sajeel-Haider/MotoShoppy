@@ -21,6 +21,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
     <title>Moto-Shoppy</title>
   </head>
   <body>
@@ -28,7 +29,7 @@
       <div>
         <nav>
           <div class="navrow">
-            <img src="/imgs/icons/logo_.png" alt="" />
+            <!-- <img src="/imgs/icons/logo_.png" alt="" /> -->
             <ul class="main-nav">
               <li>
                 <a href="#">Home</a>
@@ -37,10 +38,12 @@
                 <a href="#">About Us</a>
               </li>
             </ul>
-            <div class="icon">
-              <ion-icon name="cart-outline"></ion-icon>
-              <ion-icon name="heart-outline"></ion-icon>
-            </div>
+            <a href="#" class="nav-button">
+              <ion-icon name="cart-outline" class="icon icon-nav"></ion-icon
+            ></a>
+            <a href="#" class="nav-button">
+              <ion-icon name="heart-outline" class="icon icon-nav"></ion-icon>
+            </a>
           </div>
           <div class="search">
             <form action="" class="search-bar">
@@ -51,13 +54,20 @@
         </nav>
       </div>
       <div class="punchLine">
-        <h1>Motor &dash; Bike Equipments <br />Destribution</h1>
+        <h1 class="pL">Motor &dash; Bike Equipments <br />Destribution</h1>
       </div>
     </header>
     <section class="sec explore">
-      <h2>Explore</h2>
-      <ion-icon name="arrow-forward-outline"></ion-icon>
+      <h1>
+        Explore
+        <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
+      </h1>
+
+      <div class="">ali</div>
     </section>
     <footer></footer>
   </body>
+
+  <!--  JAVASCRIPT  -->
+  <script src="/JavaScript/mainPage.js"></script>
 </html>
