@@ -164,6 +164,8 @@ header {
   color: #fff;
   font-size: 240%;
   word-spacing: 10px;
+  margin-right: 8%;
+  margin-left: 10%;
 }
 span {
   opacity: 0;
@@ -233,4 +235,25 @@ h3 {
   color: black;
   padding-left: 5%;
   padding-right: 5%;
+}
+/************************** EXPLORE ******************************************/
+/**************************ALL PRODUCTS SECTION*******************************/
+.prod img {
+  height: 90%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.2), 0 4px 16px rgb(0, 0, 0), 0.2;
+  transition: 1s;
+}
+.prod img:hover {
+  transform: scale(1.6);
+}
+.prod a {
+}
+.prod {
 }
