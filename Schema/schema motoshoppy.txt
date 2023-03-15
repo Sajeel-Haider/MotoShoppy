@@ -1,0 +1,75 @@
+Account
+
+-> 3 Types (Admin 0, Customers 2, Sellers 1 )
+Id (A-   S-   C-)
+Name
+City
+Phone
+emails
+type
+password
+Address
+
+ADD ON
+
+Sellers ->
+Portfolio etc
+
+Products
+
+Prod_Id
+Product Name
+Category (Accessories, Parts, Helmets,Lights, Gloves)
+Description
+Price
+Quantity
+Seller_id
+Image
+
+Orders
+
+Ord_Id PK
+Prd_id FK1
+Acc_Id FK2
+Quantity
+Date
+Delivered 0,1
+Payment Method -- cash on Del
+
+
+Order Details
+ 
+(Ord_Id FK 
+Prd_id) Composite key
+Quantity
+
+
+Review 
+
+(Ord_Id FK
+Prd_id FK1) Comp Key
+Acc_Id FK2 --Cust CHECK
+Rev_text
+Rating (1-5)
+
+CART
+
+cart_id
+Prd_id
+Acc_id
+Quantity
+
+
+Wishlist
+
+(Prd_id
+Acc_id) Comps
+
+
+Chat Messages
+
+Ch_ID (PK)
+Sender ID (FK)
+Receiver ID (FK)
+Message
+Curr_Date (date and time)
