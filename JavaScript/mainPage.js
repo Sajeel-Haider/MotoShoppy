@@ -1,4 +1,7 @@
+"use strict";
+
 const punchLine = document.querySelector(".punchLine h1");
+const hiddenElements = document.querySelectorAll(".hidden");
 const pLText = punchLine.textContent;
 console.log(pLText);
 
@@ -24,3 +27,17 @@ function complete() {
   clearInterval(timer);
   timer = null;
 }
+
+//footer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+hiddenElements.forEach((el) => observer.observe(el));
+console.log(hiddenElements);
