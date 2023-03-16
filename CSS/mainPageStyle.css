@@ -87,19 +87,20 @@ header {
   color: var(--color-primary);
   margin-right: 2%;
 }
-
+.nav-button ion-icon:hover,
+.nav-button ion-icon:active {
+  border-bottom: 2px solid rgb(22, 160, 133);
+  color: #fff;
+}
 /*  SEARCH BAR  */
 .search {
   /* display: flex;
   justify-content: center;
   margin-left: 5%;
   margin-right: 5%; */
-
-  position: absolute;
   display: flex;
   justify-content: center;
-  left: 30%;
-  right: 30%;
+  width: 2px;
 }
 .search-bar {
   background: rgb(27, 50, 45, 0.8);
@@ -107,7 +108,7 @@ header {
   align-items: center;
   border-radius: 60px;
   padding: 10px, 20px;
-  width: 60%;
+  width: 50%;
   opacity: 0;
   animation: fading 4s ease forwards;
 }
@@ -246,8 +247,8 @@ h3 {
   margin: auto;
   width: 50%;
   padding: 10px;
-  box-shadow: 0 2px 2px 0 rgba(87, 86, 86, 0.5),
-    0 4px 16px rgba(107, 96, 96, 0.5);
+  /* box-shadow: 0 2px 2px 0 rgba(87, 86, 86, 0.5),
+    0 4px 16px rgba(107, 96, 96, 0.5); */
   transition: 1s;
 }
 .prod img:hover {
@@ -256,6 +257,11 @@ h3 {
 .prod a {
 }
 .prod {
+}
+.partProd img {
+  height: 75%;
+  width: 75%;
+  border-radius: 20%;
 }
 /**FOOTER**/
 
@@ -315,7 +321,13 @@ h3 {
   letter-spacing: 2px;
   padding: 2% 2%;
 }
+.footersec3 img {
+  height: 50%;
+  width: 50%;
+  margin-left: 15%;
+}
 .footersec3 {
+  margin-top: 20%;
 }
 
 .hidden {
