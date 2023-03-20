@@ -269,7 +269,7 @@ h3 {
 }
 /*--*/
 .explore {
-  height: 100vh;
+  height: 225vh;
 }
 .explore h3 {
   text-align: center;
@@ -380,6 +380,9 @@ h3 {
   .content {
     width: 100%;
   }
+}
+/**************************TOP SELLING****************************************/
+.topSelling {
 }
 /**************************ALL PRODUCTS SECTION*******************************/
 .prod img {
