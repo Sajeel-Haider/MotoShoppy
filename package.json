@@ -2,5 +2,23 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3"
-  }
+  },
+  "name": "sd",
+  "version": "1.0.0",
+  "description": "MotoShoppy an E-commerce website",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sajeel-Haider/MotoShoppy.git"
+  },
+  "author": "Sajeel Haider",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sajeel-Haider/MotoShoppy/issues"
+  },
+  "homepage": "https://github.com/Sajeel-Haider/MotoShoppy#readme"
 }
