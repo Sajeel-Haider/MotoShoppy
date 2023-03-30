@@ -90,7 +90,6 @@ header {
 }
 .nav-button ion-icon:hover,
 .nav-button ion-icon:active {
-  border-bottom: 2px solid rgb(22, 160, 133);
   color: #fff;
 }
 /*  SEARCH BAR  */
