@@ -1,521 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--                    FONTS                       -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/generalStyle.css" />
+    <link rel="stylesheet" href="/CSS/mainPageStyle.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--                    FONTS                       -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="/CSS/generalStyle.css" />
-  <link rel="stylesheet" href="/CSS/mainPageStyle.css" />
-
-  <!-- <link
+    <!-- <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.css"
     /> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-grid.css" />
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap-grid.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
-  <title>Moto-Shoppy</title>
-</head>
+    <title>Moto-Shoppy</title>
+  </head>
 
-<body>
-  <header>
-    <div>
-      <nav>
-        <div class="navrow container">
-          <!-- <img src="/imgs/icons/logo_.png" alt="" /> -->
-          <ul class="main-nav container">
-            <li>
-              <a href="#">Home</a>
-              <a href="#">Explore</a>
-              <a href="#">Sign Up</a>
-              <a href="">About Us</a>
-            </li>
-          </ul>
-          <a href="#" class="nav-button">
-            <ion-icon name="cart-outline" class="icon icon-nav"></ion-icon></a>
-          <a href="#" class="nav-button">
-            <ion-icon name="heart-outline" class="icon icon-nav"></ion-icon>
-          </a>
+  <body>
+    <header>
+      <div>
+        <nav>
+          <div class="navrow container">
+            <!-- <img src="/imgs/icons/logo_.png" alt="" /> -->
+            <ul class="main-nav container">
+              <li>
+                <a href="#">Home</a>
+                <a href="#">Explore</a>
+                <a href="#">Sign Up</a>
+                <a href="/Html/aboutuspage.html">About Us</a>
+              </li>
+            </ul>
+            <a href="#" class="nav-button">
+              <ion-icon name="cart-outline" class="icon icon-nav"></ion-icon
+            ></a>
+            <a href="#" class="nav-button">
+              <ion-icon name="heart-outline" class="icon icon-nav"></ion-icon>
+            </a>
+          </div>
+          <div class="search container">
+            <form action="" class="search-bar">
+              <input type="Text" placeholder="Search Anything" />
+              <button><img src="/imgs/icons/searchicon.png" alt="" /></button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div class="container punchLine">
+        <h1 class="pL">Motor &dash; Bike Equipments <br />Destribution</h1>
+      </div>
+    </header>
+    <section class="sec allproducts">
+      <div class="container">
+        <h1>All Products</h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card prod hidden">
+            <img
+              src="/imgs/[removal.ai]_tmp-6410cf396379a.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h3 class="card-title">Engine</h3>
+              <p class="card-text">
+                We are the only online engine retailers containing one of the
+                best Engines LIKE V4, Ducati, Flat Twin Engine etc
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="search container">
-          <form action="" class="search-bar">
-            <input type="Text" placeholder="Search Anything" />
-            <button><img src="/imgs/icons/searchicon.png" alt="" /></button>
-          </form>
+        <div class="col">
+          <div class="card prod hidden">
+            <img
+              src="/imgs/SMG_6_GLOVES.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h3 class="card-title">Gloves</h3>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
         </div>
-      </nav>
-    </div>
-    <div class="container punchLine">
-      <h1 class="pL">Motor &dash; Bike Equipments <br />Destribution</h1>
-    </div>
-  </header>
-  <section class="sec allproducts">
-    <div class="container">
-      <h1>All Products</h1>
-    </div>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div class="col">
-        <div class="card prod hidden">
-          <img src="/imgs/[removal.ai]_tmp-6410cf396379a.png" class="card-img-top img-fluid" alt="..." />
-          <div class="card-body">
-            <h3 class="card-title">Engine</h3>
-            <p class="card-text">
-              We are the only online engine retailers containing one of the
-              best Engines LIKE V4, Ducati, Flat Twin Engine etc
-            </p>
+        <div class="col">
+          <div class="card prod hidden">
+            <img
+              src="/imgs/logo_.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h3 class="card-title">Helmets</h3>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card prod hidden">
+            <img src="/imgs/bag.png" class="card-img-top img-fluid" alt="..." />
+            <div class="card-body">
+              <h3 class="card-title">Bags</h3>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card prod hidden partProd">
+            <img
+              src="/imgs/bike parts.jpg"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h3 class="card-title">Other Accessories</h3>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card prod hidden">
+            <img
+              src="/imgs/tyre.png"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <h3 class="card-title">Tyres</h3>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card prod hidden">
-          <img src="/imgs/SMG_6_GLOVES.png" class="card-img-top img-fluid" alt="..." />
-          <div class="card-body">
-            <h3 class="card-title">Gloves</h3>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+    </section>
+    <section class="sec explore">
+      <div class="container">
+        <h1>
+          Explore
+          <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
+        </h1>
+        <div class="gallery">
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
             </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-1">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-2">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-3">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-4">Buy Now</button>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-1">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-2">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-3">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-4">Buy Now</button>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-1">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-2">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-3">Buy Now</button>
+          </div>
+          <div class="content">
+            <img src="/imgs/logo_.png" alt="" />
+            <h3>Helmet</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+            </p>
+            <h6>Rs.100.00</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy-4">Buy Now</button>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card prod hidden">
-          <img src="/imgs/logo_.png" class="card-img-top img-fluid" alt="..." />
-          <div class="card-body">
-            <h3 class="card-title">Helmets</h3>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-          </div>
-        </div>
+    </section>
+    <section class="sec topSelling">
+      <div class="container">
+        <h1>
+          Top Selling
+          <ion-icon name="trending-up-outline"></ion-icon>
+        </h1>
       </div>
-      <div class="col">
-        <div class="card prod hidden">
-          <img src="/imgs/bag.png" class="card-img-top img-fluid" alt="..." />
-          <div class="card-body">
-            <h3 class="card-title">Bags</h3>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card prod hidden partProd">
-          <img src="/imgs/bike parts.jpg" class="card-img-top img-fluid" alt="..." />
-          <div class="card-body">
-            <h3 class="card-title">Other Accessories</h3>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card prod hidden">
-          <img src="/imgs/tyre.png" class="card-img-top img-fluid" alt="..." />
-          <div class="card-body">
-            <h3 class="card-title">Tyres</h3>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="sec explore">
-    <div class="container">
-      <h1>
-        Explore
-        <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
-      </h1>
-      <div class="gallery">
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-1">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-2">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-3">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-4">Buy Now</button>
-        </div>
-      </div>
-      <div class="gallery">
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-1">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-2">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-3">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-4">Buy Now</button>
-        </div>
-      </div>
-      <div class="gallery">
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-1">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-2">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-3">Buy Now</button>
-        </div>
-        <div class="content">
-          <img src="/imgs/logo_.png" alt="" />
-          <h3>Helmet</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
-          </p>
-          <h6>Rs.100.00</h6>
-          <ul>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star"></i></li>
-          </ul>
-          <button class="buy-4">Buy Now</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="sec topSelling">
-    <div class="container">
-      <h1>
-        Top Selling
-        <ion-icon name="trending-up-outline"></ion-icon>
-      </h1>
-    </div>
-    <div class="topSelling-container container">
-      <input type="radio" name="slider" class="d-none" id="s1" checked />
-      <input type="radio" name="slider" class="d-none" id="s2" />
-      <input type="radio" name="slider" class="d-none" id="s3" />
-      <input type="radio" name="slider" class="d-none" id="s4" />
-      <input type="radio" name="slider" class="d-none" id="s5" />
+      <div class="topSelling-container container">
+        <input type="radio" name="slider" class="d-none" id="s1" checked />
+        <input type="radio" name="slider" class="d-none" id="s2" />
+        <input type="radio" name="slider" class="d-none" id="s3" />
+        <input type="radio" name="slider" class="d-none" id="s4" />
+        <input type="radio" name="slider" class="d-none" id="s5" />
 
-      <div class="topSelling-main-div">
-        <label for="s1" id="slide1">
-          <div class="topSelling-card">
-            <div class="image">
-              <img src="/imgs/logo_.png" alt="" />
-              <div class="dots">
-                <div></div>
-                <div></div>
-                <div></div>
+        <div class="topSelling-main-div">
+          <label for="s1" id="slide1">
+            <div class="topSelling-card">
+              <div class="image">
+                <img src="/imgs/logo_.png" alt="" />
+                <div class="dots">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="infos">
+                <span class="name">Developer's Mania</span>
+                <span class="detail">
+                  Let's explore the exciting world of web development
+                  together!</span
+                >
+              </div>
+              <div class="socials">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share-nodes"></i>
               </div>
             </div>
-            <div class="infos">
-              <span class="name">Developer's Mania</span>
-              <span class="detail">
-                Let's explore the exciting world of web development
-                together!</span>
-            </div>
-            <div class="socials">
-              <i class="fa-regular fa-heart"></i>
-              <i class="fa-regular fa-bookmark"></i>
-              <i class="fa-solid fa-share-nodes"></i>
-            </div>
-          </div>
-        </label>
+          </label>
 
-        <label for="s2" id="slide2">
-          <div class="topSelling-card">
-            <div class="image">
-              <img src="/imgs/logo_.png" alt="" />
+          <label for="s2" id="slide2">
+            <div class="topSelling-card">
+              <div class="image">
+                <img src="/imgs/logo_.png" alt="" />
+              </div>
+              <div class="infos">
+                <span class="name">5 Extensions of VS Code</span>
+                <span class="detail"
+                  >Prettier , Snapcode , live server , live share , bracket
+                  colorizer.
+                </span>
+              </div>
+              <div class="socials">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
             </div>
-            <div class="infos">
-              <span class="name">5 Extensions of VS Code</span>
-              <span class="detail">Prettier , Snapcode , live server , live share , bracket
-                colorizer.
-              </span>
-            </div>
-            <div class="socials">
-              <i class="fa-regular fa-heart"></i>
-              <i class="fa-regular fa-bookmark"></i>
-              <i class="fa-solid fa-share-nodes"></i>
-            </div>
-          </div>
-        </label>
+          </label>
 
-        <label for="s3" id="slide3">
-          <div class="topSelling-card">
-            <div class="image">
-              <img src="/imgs/logo_.png" alt="" />
+          <label for="s3" id="slide3">
+            <div class="topSelling-card">
+              <div class="image">
+                <img src="/imgs/logo_.png" alt="" />
+              </div>
+              <div class="infos">
+                <span class="name">Full-Stack Web Development</span>
+                <span class="detail">Front End & Back End</span>
+              </div>
+              <div class="socials">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
             </div>
-            <div class="infos">
-              <span class="name">Full-Stack Web Development</span>
-              <span class="detail">Front End & Back End</span>
-            </div>
-            <div class="socials">
-              <i class="fa-regular fa-heart"></i>
-              <i class="fa-regular fa-bookmark"></i>
-              <i class="fa-solid fa-share-nodes"></i>
-            </div>
-          </div>
-        </label>
+          </label>
 
-        <label for="s4" id="slide4">
-          <div class="topSelling-card">
-            <div class="image">
-              <img src="/imgs/logo_.png" alt="" />
+          <label for="s4" id="slide4">
+            <div class="topSelling-card">
+              <div class="image">
+                <img src="/imgs/logo_.png" alt="" />
+              </div>
+              <div class="infos">
+                <span class="name">Structure of HTML</span>
+                <span class="detail"
+                  >Structure of HTML , head , body & title</span
+                >
+              </div>
+              <div class="socials">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
             </div>
-            <div class="infos">
-              <span class="name">Structure of HTML</span>
-              <span class="detail">Structure of HTML , head , body & title</span>
-            </div>
-            <div class="socials">
-              <i class="fa-regular fa-heart"></i>
-              <i class="fa-regular fa-bookmark"></i>
-              <i class="fa-solid fa-share-nodes"></i>
-            </div>
-          </div>
-        </label>
+          </label>
 
-        <label for="s5" id="slide5">
-          <div class="topSelling-card">
-            <div class="image">
-              <img src="/imgs/logo_.png" alt="" />
+          <label for="s5" id="slide5">
+            <div class="topSelling-card">
+              <div class="image">
+                <img src="/imgs/logo_.png" alt="" />
+              </div>
+              <div class="infos">
+                <span class="name">Front-End Developer</span>
+                <span class="detail"
+                  >Aiming to contribute to software by becoming a full stack
+                  software developer.</span
+                >
+              </div>
+              <div class="socials">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
             </div>
-            <div class="infos">
-              <span class="name">Front-End Developer</span>
-              <span class="detail">Aiming to contribute to software by becoming a full stack
-                software developer.</span>
-            </div>
-            <div class="socials">
-              <i class="fa-regular fa-heart"></i>
-              <i class="fa-regular fa-bookmark"></i>
-              <i class="fa-solid fa-share-nodes"></i>
-            </div>
-          </div>
-        </label>
-      </div>
-    </div>
-  </section>
-  <footer class="container-fluid">
-    <div class="container-fluid footerLinks hidden">
-      <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
-      <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-      <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-      <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
-      <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
-    </div>
-    <div class="container-fluid main-footer">
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="container footersec1 hidden">
-            <h2>Moto Shoppy</h2>
-            <p>
-              Thoughtful platform for bike enthusiasts providing a connection
-              between the sellers and the customers
-            </p>
-          </div>
+          </label>
         </div>
-        <div class="col-sm-9">
-          <div class="row">
-            <div class="col-8 col-sm-6">
-              <div class="container footersec2 hidden">
-                <h3>Our Products</h3>
-                <div class="prds-footer">
-                  <ul>
-                    <li>Helmet</li>
-                    <li>Tyres</li>
-                    <li>Gloves</li>
-                    <li>Engine Parts</li>
-                    <li>Bags</li>
-                    <li>Accessories</li>
-                  </ul>
+      </div>
+    </section>
+    <footer class="container-fluid">
+      <div class="container-fluid footerLinks hidden">
+        <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+      </div>
+      <div class="container-fluid main-footer">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="container footersec1 hidden">
+              <h2>Moto Shoppy</h2>
+              <p>
+                Thoughtful platform for bike enthusiasts providing a connection
+                between the sellers and the customers
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-8 col-sm-6">
+                <div class="container footersec2 hidden">
+                  <h3>Our Products</h3>
+                  <div class="prds-footer">
+                    <ul>
+                      <li>Helmet</li>
+                      <li>Tyres</li>
+                      <li>Gloves</li>
+                      <li>Engine Parts</li>
+                      <li>Bags</li>
+                      <li>Accessories</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 col-sm-6">
+                <div class="container footersec3 hidden">
+                  <img class="img-fluid" src="/imgs/truelogo.png" alt="" />
                 </div>
               </div>
             </div>
-            <div class="col-4 col-sm-6">
-              <div class="container footersec3 hidden">
-                <img class="img-fluid" src="/imgs/truelogo.png" alt="" />
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid cpywrt-footer">
-      <h5>
-        <ion-icon name="alert-circle-outline"></ion-icon>
-        2023 Moto-Shoppy &dash; All Rights Reserved
-      </h5>
-    </div>
-  </footer>
+      <div class="container-fluid cpywrt-footer">
+        <h5>
+          <ion-icon name="alert-circle-outline"></ion-icon>
+          2023 Moto-Shoppy &dash; All Rights Reserved
+        </h5>
+      </div>
+    </footer>
 
-  <!--  JAVASCRIPT  -->
-  <script src="/JavaScript/mainPage.js"></script>
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-</body>
-
+    <!--  JAVASCRIPT  -->
+    <script src="/JavaScript/mainPage.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
 </html>
