@@ -1,0 +1,68 @@
+/* CSS for styling the signup form */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    padding: 20px;
+    width: 600px;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+select {
+    height: 40px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.login-link {
+    color: #069;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

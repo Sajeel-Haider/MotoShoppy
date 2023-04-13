@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="/CSS/loginPageStyle.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2>Login</h2>
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <div class="password-input-container">
+                    <input type="password" id="password" name="password" minlength="8" maxlength="20" required>
+                    <span class="show-hide-btn" onclick="togglePasswordVisibility()">Show</span>
+                </div>
+            </div>
+            <input type="submit" value="Login">
+            <a href="/Html/SignupPage.html" class="signup-link">Don't have an account? Sign up now!</a>
+        </form>
+    </div>
+    <script src="/CSS/loginPageStyle.css"></script>
+</body>
+</html>

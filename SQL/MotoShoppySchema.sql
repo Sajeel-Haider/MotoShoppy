@@ -7,7 +7,7 @@ create table accounts
 	aName Varchar(20) not null,
 	city varchar(15) not null,
 	phone varchar(12) not null,
-	email varchar(30) not null,
+	email varchar(30) not null unique,
 	password varchar(20) not null,
 	type int not null,
 	address varchar(100) not null,

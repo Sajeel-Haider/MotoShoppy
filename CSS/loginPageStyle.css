@@ -1,0 +1,81 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.password-input-container {
+    position: relative;
+}
+
+.show-hide-btn {
+    background-color: transparent;
+    border: none;
+    color: #069;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.signup-link {
+    color: #069;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
