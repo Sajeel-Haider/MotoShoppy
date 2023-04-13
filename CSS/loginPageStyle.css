@@ -1,6 +1,9 @@
 body {
     background-color: #f2f2f2;
+    background-image: linear-gradient(rgba(14, 14, 14, 0.7), rgb(0, 0, 0, 0.7)),
+    url(/imgs/bckgrnd_lg.jpg);
     font-family: Arial, sans-serif;
+    
 }
 
 .container {
