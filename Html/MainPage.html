@@ -49,7 +49,9 @@
           <ul class="main-nav container">
             <li>
               <a href="#">Home</a>
-              <a href="#">Explore</a>
+              <a href="#section--exploreId" class="btn--scroll nav--explore"
+                >Explore</a
+              >
               <a href="/Html/SignupPage.html">Sign Up</a>
               <a href="/Html/aboutuspage.html">About Us</a>
             </li>
@@ -75,7 +77,7 @@
     </header>
     <section class="sec allproducts">
       <div class="container">
-        <h1>All Products</h1>
+        <h1>Our Products</h1>
       </div>
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
@@ -86,11 +88,11 @@
               alt="..."
             />
             <div class="card-body">
-              <h3 class="card-title">Engine</h3>
-              <p class="card-text">
+              <h2 class="card-title">Engine</h2>
+              <!-- <p class="card-text">
                 We are the only online engine retailers containing one of the
                 best Engines LIKE V4, Ducati, Flat Twin Engine etc
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -102,12 +104,12 @@
               alt="..."
             />
             <div class="card-body">
-              <h3 class="card-title">Gloves</h3>
-              <p class="card-text">
+              <h2 class="card-title">Gloves</h2>
+              <!-- <p class="card-text">
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
                 longer.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -119,12 +121,12 @@
               alt="..."
             />
             <div class="card-body">
-              <h3 class="card-title">Helmets</h3>
-              <p class="card-text">
+              <h2 class="card-title">Helmets</h2>
+              <!-- <p class="card-text">
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
                 longer.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -132,12 +134,12 @@
           <div class="card prod hidden">
             <img src="/imgs/bag.png" class="card-img-top img-fluid" alt="..." />
             <div class="card-body">
-              <h3 class="card-title">Bags</h3>
-              <p class="card-text">
+              <h2 class="card-title">Bags</h2>
+              <!-- <p class="card-text">
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
                 longer.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -149,11 +151,11 @@
               alt="..."
             />
             <div class="card-body">
-              <h3 class="card-title">Other Accessories</h3>
-              <p class="card-text">
+              <h2 class="card-title">Other Accessories</h2>
+              <!-- <p class="card-text">
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -165,18 +167,18 @@
               alt="..."
             />
             <div class="card-body">
-              <h3 class="card-title">Tyres</h3>
-              <p class="card-text">
+              <h2 class="card-title">Tyres</h2>
+              <!-- <p class="card-text">
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
                 longer.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="sec explore">
+    <section class="sec explore" id="section--exploreId">
       <div class="container">
         <h1>
           Explore
@@ -500,7 +502,58 @@
         </div>
       </div>
     </section>
-
+    <footer class="container-fluid">
+      <div class="container-fluid footerLinks hidden">
+        <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+      </div>
+      <div class="container-fluid main-footer">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="container footersec1 hidden">
+              <h2>Moto Shoppy</h2>
+              <p>
+                Thoughtful platform for bike enthusiasts providing a connection
+                between the sellers and the customers
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-8 col-sm-6">
+                <div class="container footersec2 hidden">
+                  <h3>Our Products</h3>
+                  <div class="prds-footer">
+                    <ul>
+                      <li>Helmet</li>
+                      <li>Tyres</li>
+                      <li>Gloves</li>
+                      <li>Engine Parts</li>
+                      <li>Bags</li>
+                      <li>Accessories</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 col-sm-6">
+                <div class="container footersec3 hidden">
+                  <img class="img-fluid" src="/imgs/truelogo.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid cpywrt-footer">
+        <h5>
+          <ion-icon name="alert-circle-outline"></ion-icon>
+          2023 Moto-Shoppy &dash; All Rights Reserved
+        </h5>
+      </div>
+    </footer>
     <!--  JAVASCRIPT  -->
     <script src="/JavaScript/mainPage.js"></script>
     <script src="/JavaScript/footerAnimate.js"></script>

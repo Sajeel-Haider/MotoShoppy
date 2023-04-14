@@ -69,11 +69,7 @@ h1:after {
   opacity: 0;
   animation: fading 8s ease forwards;
 }
-@keyframes fading {
-  to {
-    opacity: 1;
-  }
-}
+
 /*
 h1,
 h2,
@@ -452,4 +448,13 @@ h3 {
   height: 75%;
   width: 75%;
   border-radius: 20%;
+}
+.card-body {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

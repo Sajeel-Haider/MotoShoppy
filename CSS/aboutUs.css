@@ -1,8 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: "Lato", Arial, sans-serif;
 
+  padding: 0;
   background-color: #f1f1f1;
 }
 /* 
@@ -43,8 +42,10 @@ nav a:hover {
     color: #f1c40f;
 } */
 /*NAVIGATION BAR*/
-.main-nav {
-  background-color: var(--color-contrast);
+header {
+}
+nav {
+  background-color: tomato;
 }
 /* }
 main {
@@ -91,3 +92,7 @@ ul {
     margin-top: 120px;
   }
 } */
+main {
+  color: black;
+  margin: 2%;
+}

@@ -136,7 +136,11 @@ section {
   background: rgb(0, 0, 0);
   cursor: pointer;
 }
-
+@keyframes fading {
+  to {
+    opacity: 1;
+  }
+}
 /**FOOTER**/
 
 .footerLinks {
@@ -212,4 +216,11 @@ section {
 .show {
   opacity: 1;
   filter: blur(0);
+}
+
+footer {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
