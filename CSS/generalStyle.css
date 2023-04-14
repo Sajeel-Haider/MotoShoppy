@@ -16,3 +16,200 @@ h1 {
   font-size: 1.8em;
   margin: 0.67em 0;
 }
+:root {
+  --color-primary: rgb(22, 160, 133);
+  --color-secondary: rgb(27, 50, 45);
+  --color-contrast: #475f82;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: rgba(255, 255, 255, 0.848);
+  color: #ffffff;
+  font-family: "Lato", "Arial", sans-serif; /*if LATO is not loaded then ARIAL or SANS-SERIF will be shown*/
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; /*Helps loading external fonts easily and in an optimized manner */
+}
+/*----------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*  REUSABLE CONPONENTS */
+/*--------------------------------------------------------------------------------------------------------------*/
+.row {
+  margin: 0 auto 0 auto;
+}
+section {
+  padding: 80px 0;
+}
+.box {
+  padding: 1%;
+}
+.icon {
+  font-size: 40px;
+}
+/*******************************NAVIGATION BAR***********************/
+.navrow img {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 5px;
+  margin-left: 2px;
+}
+.main-nav {
+  list-style: none;
+  float: center;
+  text-align: center;
+  padding: 14px 16px;
+}
+.main-nav li {
+  margin-top: 10px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 5px 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 75%; /* 18 divided by 20 */
+  margin-left: 40px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid rgb(22, 160, 133);
+}
+.nav-button {
+  float: right;
+  color: var(--color-primary);
+  margin-right: 2%;
+}
+.nav-button ion-icon:hover,
+.nav-button ion-icon:active {
+  color: #fff;
+}
+/*  SEARCH BAR  */
+.search {
+  /* display: flex;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%; */
+  display: flex;
+  justify-content: center;
+  width: 2px;
+}
+.search-bar {
+  background: rgb(27, 50, 45, 0.8);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px, 20px;
+  width: 50%;
+  opacity: 0;
+  animation: fading 4s ease forwards;
+}
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  margin-left: 20px;
+  outline: none;
+  padding: 24px, 24px;
+  font-size: 15px;
+  color: white;
+}
+::placeholder {
+  color: white;
+}
+.search-bar button img {
+  width: 20px;
+}
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/**FOOTER**/
+
+.footerLinks {
+  font-size: 5vh;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+}
+.footerLinks a {
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 0.8%;
+  margin-bottom: 0.2%;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.main-footer {
+  background-color: var(--color-secondary);
+}
+.footersec1 {
+  margin-top: 40%;
+  margin-bottom: 40%;
+}
+.footersec1 h2 {
+  border-color: #fff;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  margin-right: 10%;
+}
+.footersec2 {
+  margin-top: 20%;
+}
+.footersec2 h3 {
+  height: 30px;
+  margin-left: 35%;
+}
+.title-prod-footer {
+}
+.prds-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.prds-footer li {
+  list-style: none;
+  padding-bottom: 10%;
+}
+.cpywrt-footer {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  word-spacing: 4px;
+  letter-spacing: 2px;
+  padding: 2% 2%;
+}
+.footersec3 img {
+  height: 50%;
+  width: 50%;
+  margin-left: 15%;
+}
+.footersec3 {
+  margin-top: 20%;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1.7s;
+  filter: blur(3px);
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
