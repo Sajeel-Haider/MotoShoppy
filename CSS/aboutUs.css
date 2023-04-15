@@ -103,9 +103,12 @@ main {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column-reverse;
+  animation-name: slidein;
+  animation-duration: 2s;
 }
 .about--us p {
   font-weight: bolder;
+  text-align: justify;
 }
 .head--1 {
   display: flex;
@@ -115,18 +118,19 @@ main {
   padding-top: 1%;
   padding-bottom: 1%;
 }
+@keyframes slidein {
+  from {
+    transform: translateY(100%);
+  }
 
-.mission {
-  display: flex;
-  padding: 80px 0;
-  justify-content: flex-start;
-
-  align-items: baseline;
-  flex-wrap: nowrap;
-  flex-direction: row-reverse;
+  to {
+    transform: translateY(0%);
+  }
 }
+
 .mission p {
   font-weight: bolder;
+  text-align: justify;
 }
 .head--2 {
   display: flex;
@@ -137,16 +141,9 @@ main {
   padding-bottom: 1%;
 }
 
-.our--team {
-  display: flex;
-  padding: 80px 0;
-  align-items: baseline;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: flex-start;
-}
 .our--team p {
   font-weight: bolder;
+  text-align: justify;
 }
 .head--3 {
   display: flex;
