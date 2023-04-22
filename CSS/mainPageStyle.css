@@ -7,7 +7,10 @@
 /*  HEADER */
 /*--------------------------------------------------------------------------------------------------------------*/
 header {
-  background-image: linear-gradient(rgba(14, 14, 14, 0.7), rgb(0, 0, 0, 0.7)),
+  background-image: linear-gradient(
+      rgba(29, 28, 28, 0.7),
+      rgba(27, 25, 25, 0.7)
+    ),
     url(/imgs/m_p_back1.jpg);
   background-size: cover;
   background-position: center;
@@ -155,7 +158,6 @@ h3 {
 }
 /*--*/
 .explore {
-  height: 225vh;
 }
 .explore h3 {
   text-align: center;
@@ -271,6 +273,7 @@ h3 {
 }
 .div--explore {
   margin-top: 8%;
+  color: white;
 }
 .buy-1 {
   background: var(--color-contrast);
