@@ -89,6 +89,11 @@ input:focus {
   flex-basis: 24%;
   cursor: pointer;
 }
+.small-img {
+  border: solid;
+  border-color: #146c94;
+  border-radius: 20%;
+}
 @media (max-width: 1100px) {
   .col-2 h1 {
     font-size: 40px;
