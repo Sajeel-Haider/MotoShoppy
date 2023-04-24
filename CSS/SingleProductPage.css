@@ -196,3 +196,22 @@ input:focus {
     width: 50%;
   }
 }
+/******************************REVIEW SECTION****************/
+.reviewSection {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+}
+.rev-details h4 {
+  margin-top: 4%;
+}
+.rev-add-button {
+  display: inline-block;
+  background: #146c94;
+  color: white;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: 0.5s;
+  cursor: pointer;
+}
