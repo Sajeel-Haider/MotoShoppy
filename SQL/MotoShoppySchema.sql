@@ -67,3 +67,58 @@ create table chat (
 	DandT datetime,
 	text varchar(100) not null,
 	primary key (chatid,sid,DandT));
+
+
+--SIGNUP PROCEDURE
+create procedure SignUp
+@aName varchar(20),@city varchar(15),@phone varchar(12),@email varchar(30),@pass varchar(20),@type int,@address varchar(100),@status int output
+as begin
+	declare @num int
+	select @num=count(*) from accounts a
+	where @email=a.email
+	if (@num=0)
+	begin
+		declare @aid int
+		select @aid=(max(a.aid)+1) from accounts a
+		if (@aid is NULL)
+		begin
+			set @aid=1
+		end
+		insert into accounts values
+		(@aid,@aName,@city,@phone,@email,@pass,@type,@address);
+		set @status=1
+		Print 'Signup Successful'
+	end
+	else
+	begin
+		set @status=0
+		Print 'Signup Unsuccessful, email already exists'
+	end
+end
+--TESTING SIGNUP
+declare @status int
+exec SignUp'Fahad Ajmal','Lahore','03090078602','fahad.ajmal@gmail.com','fahad123',1,'House #4, Street #20,Block B, Phase 2, PCSIR, Lahore',@status output
+select @status as Status
+
+--LOGIN PROCEDURE
+create procedure Login
+@email varchar(30),@pass varchar(20),@status int output
+as begin
+	declare @num int
+	select @num=count(*) from accounts a
+	where a.password=@pass and a.email=@email
+	if (@num=1)
+	begin
+	set @status=1
+	Print 'Login Successful'
+	end
+	else
+	begin
+	set @status=0
+	Print 'Invalid email id or password'
+	end
+end
+--TESTING LOGIN
+declare @status int
+exec Login 'fahad.ajmal@gmail.com','fahad123',@status output
+select @status as Status
