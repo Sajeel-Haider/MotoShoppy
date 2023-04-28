@@ -1,70 +1,76 @@
 /* CSS for styling the signup form */
+html {
+  font-family: "Lato", "Arial", sans-serif; /*if LATO is not loaded then ARIAL or SANS-SERIF will be shown*/
+}
+
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(rgba(14, 14, 14, 0.7), rgb(0, 0, 0, 0.7)),
-    url(/imgs/bckgrnd_lg.jpg);
+  background-color: #f2f2f2;
+  background-image: linear-gradient(rgba(14, 14, 14, 0.7), rgb(0, 0, 0, 0.7)),
+    url(/imgs/bke11.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
 form {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    margin: 50px auto;
-    padding: 20px;
-    width: 600px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 50px auto;
+  padding: 20px;
+  width: 600px;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
 select {
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-    display: block;
-    font-size: 16px;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
 }
 
 select {
-    height: 40px;
+  height: 40px;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px;
-    width: 100%;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
 }
 
 .login-link {
-    color: #069;
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    text-decoration: none;
+  color: #069;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }

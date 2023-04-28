@@ -1,7 +1,10 @@
 "use strict";
 
 const punchLine = document.querySelector(".punchLine h1");
-const hiddenElements = document.querySelectorAll(".hidden");
+const btnScrollTo = document.querySelector(".btn--scroll");
+const sectionExpl = document.querySelector("#section--exploreId");
+const exploreBtn = document.querySelector(".nav--explore");
+
 const pLText = punchLine.textContent;
 console.log(pLText);
 
@@ -28,16 +31,30 @@ function complete() {
   timer = null;
 }
 
-//footer
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show");
-    }
-  });
+// Button scrolling
+btnScrollTo.addEventListener("click", function (e) {
+  const s1coords = sectionExpl.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log("Current scroll (X/Y)", window.pageXOffset, window.pageYOffset);
+
+  console.log(
+    "height/width viewpoTTrt",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  sectionExpl.scrollIntoView({ behavior: "smooth" });
 });
-hiddenElements.forEach((el) => observer.observe(el));
-console.log(hiddenElements);
+
+exploreBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains("nav--explore")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
