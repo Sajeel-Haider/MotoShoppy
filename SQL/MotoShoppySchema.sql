@@ -2,8 +2,17 @@ create database MotoShoppy
 go
 use MotoShoppy
 go
+drop table accounts
+drop table products
+drop table orders
+drop table order_detail
+drop table reviews
+drop table cart
+drop table wishlist
+drop table chat
+
 create table accounts 
-	(aid int not null,
+	(aid int not null identity,
 	aName Varchar(20) not null,
 	city varchar(15) not null,
 	phone varchar(12) not null,
@@ -15,7 +24,7 @@ create table accounts
 	primary key (aid));
 
 create table products
-	(pid int not null,
+	(pid int not null identity,
 	pName VARCHAR(20) not null,
 	category varchar(20) not null,
 	Description varchar(100),
@@ -24,57 +33,49 @@ create table products
 	sid int not null,
 	img image
 	primary key (pid),
-	foreign key (sid) references accounts (aid),
+	foreign key (sid) references accounts (aid) on delete cascade,
 	);
 
-alter table products add constraint delSellerProducts foreign key (sid) references accounts (aid) on delete cascade --to delete products of a seller when seller is removed
-
 create table orders (
-  oid int primary key,
+  oid int primary key identity,
   cid INT,
   Date DATE,
   Delivered INT,
-  foreign key (cid) references accounts(aid));
-
-alter table orders add constraint nullcusID foreign key (cid) references accounts (aid) on delete set null 
+  foreign key (cid) references accounts(aid) on delete set null);
 
 create table order_detail (
-	oid int not null,
+	oid int not null identity,
 	pid int not null,
 	quantity int not null,
 	foreign key (oid) references orders (oid),
-	foreign key (pid) references products (pid),
+	foreign key (pid) references products (pid) on delete cascade,
 	primary key (oid,pid));
-
-alter table order_detail add constraint nullpID foreign key (pid) references products (pid) on delete cascade --because pid not nullable
-
 
 create table reviews (
 	oid int foreign key references orders (oid),
-	pid int foreign key references products (pid),
+	pid int foreign key references products (pid) on delete cascade,
 	text varchar(100),
 	rating int not null,
 	check (rating in (1,2,3,4,5)),
 	primary key(oid,pid));
 
 create table cart (
-	aid int foreign key references accounts(aid),
+	aid int foreign key references accounts(aid) on delete cascade,
 	pid int foreign key references products(pid),
 	quantity int not null,
 	primary key (aid,pid));
 
 create table wishlist (
-	aid int foreign key references accounts(aid),
+	aid int foreign key references accounts(aid) on delete cascade,
 	pid int foreign key references products(pid),
 	primary key (aid,pid));
 
 create table chat (
-	chatid int not null,
-	sid int foreign key references accounts (aid),
+	chatid int not null identity,
+	sid int foreign key references accounts (aid) on delete cascade,
 	DandT datetime,
 	text varchar(100) not null,
 	primary key (chatid,sid,DandT));
-
 
 --SIGNUP PROCEDURE
 create procedure SignUp
@@ -85,14 +86,8 @@ as begin
 	where @email=a.email
 	if (@num=0)
 	begin
-		declare @aid int
-		select @aid=(max(a.aid)+1) from accounts a
-		if (@aid is NULL)
-		begin
-			set @aid=1
-		end
-		insert into accounts values
-		(@aid,@aName,@city,@phone,@email,@pass,@type,@address);
+		insert into accounts(aName,city,phone,email,password,type,address) values
+		(@aName,@city,@phone,@email,@pass,@type,@address);
 		set @status=1
 		Print 'Signup Successful'
 	end
@@ -106,7 +101,7 @@ end
 declare @status int
 exec SignUp'Fahad Ajmal','Lahore','03090078602','fahad.ajmal@gmail.com','fahad123',1,'House #4, Street #20,Block B, Phase 2, PCSIR, Lahore',@status output
 select @status as Status
-
+select * from accounts
 --LOGIN PROCEDURE
 create procedure Login
 @email varchar(30),@pass varchar(20),@status int output
@@ -175,36 +170,31 @@ END
 EXEC categorize
 @cate='Safety Gear'
 
---UPDATE ACCOUNT PROCEDURE
-create procedure UpdateAcc
-@aName varchar(20),@city varchar(15),@phone varchar(12),@email varchar(30),@pass varchar(20),@type int,@address varchar(100),@status int output
+--ADD PRODUCT PROCEDURE
+create procedure addProduct
+@pName varchar(20), @category varchar(20), @Description varchar(100), @price float, @quantity int, @sid int,@img image,@status int output
 as begin
 	declare @num int
-	select @num=count(*) from accounts a
-	where @email=a.email and @pass=a.password
-	if (@num=1) --
+	select @num=count(*) from products p
+	where @pName=p.pName and @sid=p.sid
+	if (@num=0)
 	begin
-		declare @aid int
-		select @aid=(max(a.aid)+1) from accounts a
-		if (@aid is NULL)
-		begin
-			set @aid=1
-		end
-		insert into accounts values
-		(@aid,@aName,@city,@phone,@email,@pass,@type,@address);
+		insert into products(pName,category,Description,price,quantity,sid,img) values
+		(@pName,@category,@Description,@price,@quantity,@sid,@img);
 		set @status=1
-		Print 'Signup Successful'
+		Print 'Product added Successfully'
 	end
 	else
 	begin
 		set @status=0
-		Print 'Signup Unsuccessful, email already exists'
+		Print 'Failed to add product, this product name already exists'
 	end
 end
---TESTING SIGNUP
+--ADD PRODUCT TESTING
 declare @status int
-exec SignUp'Fahad Ajmal','Lahore','03090078602','fahad.ajmal@gmail.com','fahad123',2,'House #4, Street #20,Block B, Phase 2, PCSIR, Lahore',@status output
+exec addProduct 'Gloves', 'Safety Gear','Riderz Gloves, FUlly padded',1500,5,1,NULL,@status output
 select @status as Status
+select * from products
 
 --DELETE PRODUCT PROCEDURE
 create procedure delProduct
@@ -226,7 +216,8 @@ as begin
 	end
 end
 --DELETE PRODUCT TESTING
-insert into products values (1, 'Helmet', 'Safety Gear','Scorpion Helmet, 2 DOT Rating',3500,5,1,NULL)
+declare @status int
+exec addProduct 'Gloves', 'Safety Gear','Riderz Gloves, FUlly padded',1500,5,1,NULL,@status output
 select * from products
 declare @status int
 exec delProduct 1,@status output
@@ -255,7 +246,7 @@ select * from accounts
 declare @status int
 exec delAccount 2,@status output
 declare @status int
-exec SignUp'Fahad Ajmal','Lahore','03090078602','fahad.ajmal@gmail.com','fahad123',2,'House #4, Street #20,Block B, Phase 2, PCSIR, Lahore',@status output
+exec SignUp'Sajeel','Haider','03090078601','sajeel.haider@gmail.com','sajeel123',1,'House #5, Street #22,Block C, Phase 1, PCSIR, Lahore',@status output
 
 
 
