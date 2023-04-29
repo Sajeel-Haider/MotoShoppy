@@ -76,8 +76,11 @@ create table chat (
 	DandT datetime,
 	text varchar(100) not null,
 	primary key (chatid,sid,DandT));
-
---SIGNUP PROCEDURE
+create table Categories (
+	category_id int  primary key,
+	category_title varchar(100)
+)
+--SIGNUP PROCEDURE (1)
 create procedure SignUp
 @aName varchar(20),@city varchar(15),@phone varchar(12),@email varchar(30),@pass varchar(20),@type int,@address varchar(100),@status int output
 as begin
@@ -102,7 +105,7 @@ declare @status int
 exec SignUp'Fahad Ajmal','Lahore','03090078602','fahad.ajmal@gmail.com','fahad123',1,'House #4, Street #20,Block B, Phase 2, PCSIR, Lahore',@status output
 select @status as Status
 select * from accounts
---LOGIN PROCEDURE
+--LOGIN PROCEDURE (2)
 create procedure Login
 @email varchar(30),@pass varchar(20),@status int output
 as begin
@@ -125,7 +128,7 @@ declare @status int
 exec Login 'fahad.ajmal@gmail.com','fahad123',@status output
 select @status as Status
 
---TOP SELLING
+--TOP SELLING (3)
 CREATE VIEW topSelling
 AS
 SELECT Top 5 p.pid FROM order_detail o
@@ -136,7 +139,7 @@ ORDER BY  SUM(o.quantity) desc
 SELECT * FROM topSelling
 
 
---SEARCH PRODUCTS
+--SEARCH PRODUCTS (4)
 Create Procedure searchProducts
 @name varchar(100)
 AS
@@ -153,7 +156,7 @@ END
 EXEC searchProducts
 @name='Leather'
 
---CATEGORY
+--CATEGORY (5)
 CREATE Procedure categorize
 @cate varchar(100)
 AS
@@ -168,9 +171,9 @@ BEGIN
 	END
 END
 EXEC categorize
-@cate='Safety Gear'
+@cate='Safetyï¿½Gear'
 
---ADD PRODUCT PROCEDURE
+--ADD PRODUCT PROCEDURE (6)
 create procedure addProduct
 @pName varchar(20), @category varchar(20), @Description varchar(100), @price float, @quantity int, @sid int,@img image,@status int output
 as begin
@@ -196,7 +199,7 @@ exec addProduct 'Gloves', 'Safety Gear','Riderz Gloves, FUlly padded',1500,5,1,N
 select @status as Status
 select * from products
 
---DELETE PRODUCT PROCEDURE
+--DELETE PRODUCT PROCEDURE (7)
 create procedure delProduct
 @pid int,@status int output
 as begin
@@ -222,7 +225,7 @@ select * from products
 declare @status int
 exec delProduct 1,@status output
 
---DELETE ACCOUNT PROCEDURE
+--DELETE ACCOUNT PROCEDURE (8)
 create procedure delAccount
 @aid int,@status int output
 as begin
@@ -249,4 +252,15 @@ declare @status int
 exec SignUp'Sajeel','Haider','03090078601','sajeel.haider@gmail.com','sajeel123',1,'House #5, Street #22,Block C, Phase 1, PCSIR, Lahore',@status output
 
 
+--VIEW FOR Seller to See all his products
+Create PROCEDURE sellerViewProducts
+@accId int
+AS
+BEGIN
+	SELECT * FROM accounts a
+	JOIN products p ON p.sid=a.aid
+	WHERE a.aid=@accId
+END
 
+EXEC sellerViewProducts
+3
