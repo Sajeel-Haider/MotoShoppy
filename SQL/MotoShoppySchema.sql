@@ -252,7 +252,7 @@ declare @status int
 exec SignUp'Sajeel','Haider','03090078601','sajeel.haider@gmail.com','sajeel123',1,'House #5, Street #22,Block C, Phase 1, PCSIR, Lahore',@status output
 
 
---VIEW FOR Seller to See all his products
+--VIEW FOR Seller to See all his products (9)
 Create PROCEDURE sellerViewProducts
 @accId int
 AS
@@ -264,3 +264,29 @@ END
 
 EXEC sellerViewProducts
 3
+
+
+
+--View for total orders so far (10)
+CREATE View totalOrders
+as
+	SELECT COUNT(o.oid) FROM orders o where o.Delivered=1
+
+
+--View for total customers registered (11)
+CREATE view totalCustomers
+AS
+	SELECT COUNT(a.aid) FROM accounts a WHERE a.type=2
+
+
+--View for total sellers registrered (12)
+CREATE view totalSellers
+AS
+	SELECT COUNT(a.aid) FROM accounts a WHERE a.type=1
+
+--View for checking total sales (13)
+CREATE view totalSales
+AS
+	SELECT SUM(p.price*p.quantity) FROM order_detail od 
+	JOIN products p ON p.pid=od.pid
+
