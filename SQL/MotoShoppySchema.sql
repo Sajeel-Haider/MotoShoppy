@@ -341,3 +341,14 @@ AS
 	SELECT SUM(p.price*p.quantity) FROM order_detail od 
 	JOIN products p ON p.pid=od.pid
 
+--Get Rating for a particular product (18)
+CREATE PROCEDURE getRating
+@p_id int
+AS
+BEGIN
+	SELECT r.rating FROM products p JOIN
+	reviews r ON p.pid=r.pid
+	WHERE p.approval=1 AND p.pid=@p_id
+END
+
+EXEC getRating 1
