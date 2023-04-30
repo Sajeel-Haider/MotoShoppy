@@ -35,6 +35,7 @@ create table products
 	primary key (pid),
 	foreign key (sid) references accounts (aid) on delete cascade,
 	);
+alter table products add approval int not null default 0
 
 create table orders (
   oid int primary key identity,
@@ -140,13 +141,13 @@ SELECT * FROM topSelling
 
 
 --SEARCH PRODUCTS (4)
-Create Procedure searchProducts
+create Procedure searchProducts
 @name varchar(100)
 AS
 BEGIN
-	if EXISTS (SELECT * FROM products Where pName LIKE ('%'+@name+'%'))
+	if EXISTS (SELECT * FROM products Where pName LIKE ('%'+@name+'%') and approval=1)
 	BEGIN
-		SELECT * FROM products Where pName LIKE ('%'+@name+'%')
+		SELECT * FROM products Where pName LIKE ('%'+@name+'%') and approval=1
 	END
 	else
 	BEGIN
@@ -154,24 +155,25 @@ BEGIN
 	END
 END
 EXEC searchProducts
-@name='Leather'
+@name='Gloves'
 
 --CATEGORY (5)
-CREATE Procedure categorize
+create Procedure categorize
 @cate varchar(100)
 AS
 BEGIN
-	if EXISTS (SELECT * FROM products Where category=@cate)
+	if EXISTS (SELECT * FROM products Where category=@cate and approval=1)
 	BEGIN
-		SELECT * FROM products Where category=@cate
+		SELECT * FROM products Where category=@cate and approval=1
 	END
 	else
 	BEGIN
 		print 'No Such Category Exists'
 	END
 END
+
 EXEC categorize
-@cate='Safety�Gear'
+@cate='Safety Gear'
 
 --ADD PRODUCT PROCEDURE (6)
 create procedure addProduct
@@ -195,7 +197,7 @@ as begin
 end
 --ADD PRODUCT TESTING
 declare @status int
-exec addProduct 'Gloves', 'Safety Gear','Riderz Gloves, FUlly padded',1500,5,1,NULL,@status output
+exec addProduct 'Gloves', 'Safety Gear','Riderz Gloves, Fully padded',1500,5,1,NULL,@status output
 select @status as Status
 select * from products
 
@@ -251,40 +253,89 @@ exec delAccount 2,@status output
 declare @status int
 exec SignUp'Sajeel','Haider','03090078601','sajeel.haider@gmail.com','sajeel123',1,'House #5, Street #22,Block C, Phase 1, PCSIR, Lahore',@status output
 
+--VIEW For admin to see all unapproved products (9)
+create view AllUnApp
+as 
+	select * from products join accounts on accounts.aid=products.sid
+	where approval=0 
 
---VIEW FOR Seller to See all his products (9)
-Create PROCEDURE sellerViewProducts
+select * from AllUnApp
+
+--PROCEDURE FOR admin to approve a product (10)
+create procedure adminApprove
+@pid int
+as begin
+	declare @num int
+	select @num=count(*) from products where pid=@pid
+	if (@num=1)
+	begin
+		update products
+		set approval=1
+		where pid=@pid
+		Print 'Product approved successfully'
+	end
+	else
+	begin
+		Print 'Product not found'
+	end
+end
+
+exec adminApprove 1
+--PROCEDURE FOR Seller to See his all products (11)
+create PROCEDURE sellerViewProducts
 @accId int
 AS
 BEGIN
-	SELECT * FROM accounts a
-	JOIN products p ON p.sid=a.aid
-	WHERE a.aid=@accId
+	SELECT * FROM products 
+	where sid=@accId
 END
 
-EXEC sellerViewProducts
-3
+EXEC sellerViewProducts 2
+
+--PROCEDURE FOR Seller to See his approved products (12)
+create PROCEDURE sellerViewProductsApp
+@accId int
+AS
+BEGIN
+	SELECT * FROM products 
+	where sid=@accId and approval=1
+END
+
+EXEC sellerViewProductsApp
+2
+
+--PROCEDURE FOR Seller to See his Unapproved products (13)
+create PROCEDURE sellerViewProductsUnApp
+@accId int
+AS
+BEGIN
+	SELECT * FROM products 
+	where sid=@accId and approval=0
+END
+
+EXEC sellerViewProductsUnApp
+2
 
 
 
---View for total orders so far (10)
+--View for total orders so far (14)
 CREATE View totalOrders
 as
 	SELECT COUNT(o.oid) FROM orders o where o.Delivered=1
 
 
---View for total customers registered (11)
+--View for total customers registered (15)
 CREATE view totalCustomers
 AS
 	SELECT COUNT(a.aid) FROM accounts a WHERE a.type=2
 
 
---View for total sellers registrered (12)
+--View for total sellers registrered (16)
 CREATE view totalSellers
 AS
 	SELECT COUNT(a.aid) FROM accounts a WHERE a.type=1
 
---View for checking total sales (13)
+--View for checking total sales (17)
 CREATE view totalSales
 AS
 	SELECT SUM(p.price*p.quantity) FROM order_detail od 
