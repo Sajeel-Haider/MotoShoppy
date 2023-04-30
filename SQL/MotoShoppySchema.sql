@@ -10,9 +10,8 @@ drop table reviews
 drop table cart
 drop table wishlist
 drop table chat
-
 create table accounts 
-	(aid int not null identity,
+	(aid int not null,
 	aName Varchar(20) not null,
 	city varchar(15) not null,
 	phone varchar(12) not null,
@@ -24,62 +23,63 @@ create table accounts
 	primary key (aid));
 
 create table products
-	(pid int not null identity,
+	(pid int not null,
 	pName VARCHAR(20) not null,
 	category varchar(20) not null,
 	Description varchar(100),
 	price float not null,
 	quantity int not null,
 	sid int not null,
-	img image
+	img image,
+	approval int,
 	primary key (pid),
-	foreign key (sid) references accounts (aid) on delete cascade,
+	foreign key (sid) references accounts (aid),
 	);
-alter table products add approval int not null default 0
 
 create table orders (
-  oid int primary key identity,
+  oid int primary key,
   cid INT,
   Date DATE,
   Delivered INT,
-  foreign key (cid) references accounts(aid) on delete set null);
+  foreign key (cid) references accounts(aid));
 
 create table order_detail (
-	oid int not null identity,
+	oid int not null,
 	pid int not null,
 	quantity int not null,
 	foreign key (oid) references orders (oid),
-	foreign key (pid) references products (pid) on delete cascade,
+	foreign key (pid) references products (pid),
 	primary key (oid,pid));
 
 create table reviews (
 	oid int foreign key references orders (oid),
-	pid int foreign key references products (pid) on delete cascade,
+	pid int foreign key references products (pid),
 	text varchar(100),
 	rating int not null,
 	check (rating in (1,2,3,4,5)),
 	primary key(oid,pid));
 
 create table cart (
-	aid int foreign key references accounts(aid) on delete cascade,
+	aid int foreign key references accounts(aid),
 	pid int foreign key references products(pid),
 	quantity int not null,
 	primary key (aid,pid));
 
 create table wishlist (
-	aid int foreign key references accounts(aid) on delete cascade,
+	aid int foreign key references accounts(aid),
 	pid int foreign key references products(pid),
 	primary key (aid,pid));
 
 create table chat (
-	chatid int not null identity,
-	sid int foreign key references accounts (aid) on delete cascade,
+	chatid int not null,
+	sid int foreign key references accounts (aid),
 	DandT datetime,
 	text varchar(100) not null,
 	primary key (chatid,sid,DandT));
+
 create table Categories (
-	category_id int  primary key,
-	category_title varchar(100)
+	category_id int primary key,
+	category_title varchar(20) --foreign key references products (category)
 )
 --SIGNUP PROCEDURE (1)
 create procedure SignUp
@@ -348,7 +348,7 @@ AS
 BEGIN
 	SELECT r.rating FROM products p JOIN
 	reviews r ON p.pid=r.pid
-	WHERE p.approval=1 AND p.pid=@p_id
+	WHERE p.pid=@p_id
 END
 
 EXEC getRating 1
